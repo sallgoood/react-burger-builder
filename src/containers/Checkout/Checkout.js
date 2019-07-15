@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary'
 
-//FIXME burger is not updated in UI
 class Checkout extends Component {
     state = {
         ingredients: {
@@ -17,10 +16,9 @@ class Checkout extends Component {
         const ingredients = {};
         for (let param of query.entries()) {
             //['salad', '1']
-            ingredients[param[0]] = param[1];
+            ingredients[param[0]] = +param[1];
         }
         this.setState({ingredients: ingredients});
-        console.log("Checkout  ",ingredients);
     }
 
     checkoutCancelled = () => {
