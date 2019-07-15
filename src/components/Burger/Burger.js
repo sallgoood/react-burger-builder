@@ -1,12 +1,11 @@
 import React from 'react'
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
-import {withRouter} from 'react-router-dom'
 
 import styles from './Burger.module.css'
 
 
 const burger = (props) => {
-    console.log(props); //since withRouter, routing data are included in props
+    console.log("burger", props.ingredients);
 
     let transformedIngredients = Object.keys(props.ingredients)
         .map(ingKey => {
@@ -31,4 +30,4 @@ const burger = (props) => {
     );
 };
 
-export default withRouter(burger);
+export default burger;
