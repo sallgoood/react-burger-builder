@@ -28,7 +28,8 @@ class BurgerBuilder extends Component {
             meat: 0
         },
         totalPrice: 4,
-        purchasable: false
+        purchasable: false,
+        purchasing: false
     };
 
     updatePurchaseState(ingredients) {
@@ -75,6 +76,15 @@ class BurgerBuilder extends Component {
         this.updatePurchaseState(updatedIngredients);
     };
 
+    // This syntax won't work correctly at least we try to use 'this' keyword in here, 'this' won't refer to the class
+    // purchaseHandler() {
+    //     this.setState({purchasing: true});
+    // }
+
+    purchaseHandler = () => {
+        this.setState({purchasing: true});
+    };
+
     render() {
         const ingredientStockState = {
             ...this.state.ingredients
@@ -87,7 +97,7 @@ class BurgerBuilder extends Component {
 
         return (
             <Aux>
-                <Modal>
+                <Modal show={this.state.purchasing}>
                     <OrderSummary ingredients={this.state.ingredients}/>
                 </Modal>
                 <Burger ingredients={this.state.ingredients}/>
@@ -96,6 +106,7 @@ class BurgerBuilder extends Component {
                     ingredientRemoved={this.removeIngredientHandler}
                     disabled={ingredientStockState}
                     purchasable={this.state.purchasable}
+                    ordered={this.purchaseHandler}
                     price={this.state.totalPrice}/>
             </Aux>
         );
