@@ -8,7 +8,8 @@ const withHttpErrorHandler = (WrappedComponent, axios) => {
             error: null
         };
 
-        componentDidMount() {
+        //this will be called before child components get rendered
+        componentWillMount() {
             axios.interceptors.request.use(req => {
                 this.setState({error: null});
                 return req;
