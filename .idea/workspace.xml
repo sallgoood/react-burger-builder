@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../on-demand-baby/bubaby-service-backend" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../81f99da68fed20a9936d2093fc616db9b1eb2f61" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Hystrix" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../event-driven-ice-cream-truck" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../fitnesse" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../ftgo-application" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../kms-spring-webflux" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../microservice-config" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../microservice-gateway" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../microservice-service-registry" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../microservice-user-service" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../sparkTutorial" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../spring-music" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tdd/tdd-java-alexandria" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tdd/tdd-java-ch04-ship" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tdd/tdd-java-ch05-design" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tdd/tdd-java-ch07-books-store" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../url-shortener" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/carrier-billing" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/carrier-billing-file-handler" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/domo-report-batch" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/gazoWeb" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/member-station-backend" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/message-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/mno-services" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-auth-provider" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-back-office/backoffice-backend" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-backend-batch" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-coupon-service" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-mobile-data-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-payment-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-product-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-public-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-receipt-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-scheduled-job-operation" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/rmb-user-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../rakuten-projects/viber-sim-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../spring/spring-security" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../travel-projects/SoftwareEngineerChallenge" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-79" />
+    <option name="y" value="-877" />
+    <option name="width" value="1610" />
+    <option name="height" value="877" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
