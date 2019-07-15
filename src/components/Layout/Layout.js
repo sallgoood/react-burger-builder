@@ -1,5 +1,6 @@
 import React from 'react'
 import Aux from '../../hoc/Aux'
+import styles from './Layout.css'
 
 //Higher order component approach
 const layout = (props) => (
@@ -8,7 +9,7 @@ const layout = (props) => (
             Toolbar, SideDrawer, Backdrop
         </div>
 
-        <main>
+        <main className={styles.content}>
             {props.children}
         </main>
     </Aux>
