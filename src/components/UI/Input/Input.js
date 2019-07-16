@@ -16,6 +16,11 @@ const input = (props) => {
                                      value={props.value}
                                      {...props.elementConfig}/>;
             break;
+        case('select'):
+            inputElement = <select className={styles.InputElement}
+                                   value={props.value}
+                                   {...props.elementConfig}/>;
+            break;
         default:
             inputElement = <input className={styles.InputElement}
                                   value={props.value}
@@ -23,8 +28,12 @@ const input = (props) => {
     }
 
     return (
-        <div className={styles.Input}>
-            <label className={styles.Label}>{props.label}</label>
+        <
+            div
+            className={styles.Input}>
+            < label
+                className={styles.Label}> {props.label}
+            </label>
             {inputElement}
         </div>
     );
