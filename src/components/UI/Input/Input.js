@@ -9,16 +9,19 @@ const input = (props) => {
         case('input'):
             inputElement = <input className={styles.InputElement}
                                   value={props.value}
+                                  onChange={props.changed}
                                   {...props.elementConfig}/>;
             break;
         case('textarea'):
             inputElement = <textarea className={styles.InputElement}
                                      value={props.value}
+                                     onChange={props.changed}
                                      {...props.elementConfig}/>;
             break;
         case('select'):
             inputElement = (
                 <select className={styles.InputElement}
+                        onChange={props.changed}
                         value={props.value} // for 2-way-binding this value should be set
                         {...props.elementConfig}>
                     {props.elementConfig.options.map(op => (
@@ -28,6 +31,7 @@ const input = (props) => {
             break;
         default:
             inputElement = <input className={styles.InputElement}
+                                  onChange={props.changed}
                                   value={props.value}
                                   {...props.elementConfig}/>
     }
