@@ -17,9 +17,14 @@ const input = (props) => {
                                      {...props.elementConfig}/>;
             break;
         case('select'):
-            inputElement = <select className={styles.InputElement}
-                                   value={props.value}
-                                   {...props.elementConfig}/>;
+            inputElement = (
+                <select className={styles.InputElement}
+                        value={props.value} // for 2-way-binding this value should be set
+                        {...props.elementConfig}>
+                    {props.elementConfig.options.map(op => (
+                        <option key={op.value} value={op.value}>{op.displayValue}</option>
+                    ))}
+                </select>);
             break;
         default:
             inputElement = <input className={styles.InputElement}
