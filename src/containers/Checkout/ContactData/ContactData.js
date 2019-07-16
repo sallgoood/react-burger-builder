@@ -66,9 +66,14 @@ class ContactData extends Component {
     orderHandler = (event) => {
         event.preventDefault(); //to prevent to send the request and reload the page
         this.setState({loading: true});
+        const formData = {};
+        for (let formElementIdentifier in this.state.orderForm) {
+            formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
+        }
         const order = {
             ingredients: this.props.ingredients,
-            price: this.props.totalPrice
+            price: this.props.totalPrice,
+            ...formData
         };
 
         const orderCommand = {
@@ -104,14 +109,14 @@ class ContactData extends Component {
         }
 
         let form = (
-            <form>
+            <form onSubmit={this.orderHandler}>
                 {formElements.map(formEl => (
                     <Input elementType={formEl.config.elementType}
                            elementConfig={formEl.config.elementConfig}
                            value={formEl.config.value}
                            changed={(event) => this.inputChangeHandler(event, formEl.id)}/>
                 ))}
-                <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
+                <Button btnType="Success">ORDER</Button>
             </form>);
 
         if (this.state.loading) {
