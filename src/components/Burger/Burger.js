@@ -4,10 +4,10 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
 import styles from './Burger.module.css'
 
 
-const burger = (props) => {
-    let transformedIngredients = Object.keys(props.ingredients)
+const burger = ({ingredients}) => {
+    let transformedIngredients = Object.keys(ingredients)
         .map(ingKey => {
-            return [...Array(props.ingredients[ingKey])]
+            return [...Array(ingredients[ingKey])]
                 .map((_, index) => {
                     return <BurgerIngredient key={ingKey + index} type={ingKey}/>
                 })
@@ -17,7 +17,7 @@ const burger = (props) => {
         }, []);
 
     if (transformedIngredients.length === 0)
-        transformedIngredients = <p>Please start adding ingredients!</p>
+        transformedIngredients = <p>Please start adding ingredients!</p>;
 
     return (
         <div className={styles.Burger}>
