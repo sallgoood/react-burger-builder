@@ -4,9 +4,9 @@ import styles from './Input.module.css'
 
 const input = (props) => {
     let inputElement = null;
-    const inputStyles = [styles.InputElement];
 
-    if (props.invalid && props.shouldValidate) {
+    const inputStyles = [styles.InputElement];
+    if (props.invalid && props.shouldValidate && props.touched) {
         inputStyles.push(styles.Invalid);
     }
 
