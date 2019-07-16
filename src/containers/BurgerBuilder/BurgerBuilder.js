@@ -17,9 +17,7 @@ class BurgerBuilder extends Component {
     //     super(props);
     //     this.state = {}
     // }
-
     state = {
-        purchasable: false,
         purchasing: false,
         loading: false,
         error: false
@@ -41,7 +39,7 @@ class BurgerBuilder extends Component {
         const sum = Object.keys(ingredients)
             .map(ingKey => ingredients[ingKey])
             .reduce((sum, el) => sum + el);
-        this.setState({purchasable: sum > 0})
+        return sum > 0;
     };
 
     // This syntax won't work correctly at least we try to use 'this' keyword in here, 'this' won't refer to the class
@@ -97,7 +95,7 @@ class BurgerBuilder extends Component {
                         ingredientAdded={this.props.onIngredientAdded}
                         ingredientRemoved={this.props.onIngredientRemoved}
                         disabled={ingredientStockState}
-                        purchasable={this.state.purchasable}
+                        purchasable={this.updatePurchaseState(this.props.ings)} //we want to execute this whenever this get rendered
                         ordered={this.purchaseHandler}
                         price={this.props.price}/>
                 </Aux>);
