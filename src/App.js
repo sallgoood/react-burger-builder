@@ -6,9 +6,9 @@ import Checkout from './containers/Checkout/Checkout'
 import Orders from './containers/Orders/Orders'
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
-import burgerBuilder from './store/reducers/burgerBuilder'
+import burgerBuilderReducer from './store/reducers/burgerBuilder'
 
-const store = createStore(burgerBuilder, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(burgerBuilderReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 function App() {
     return (
