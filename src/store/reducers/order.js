@@ -6,7 +6,7 @@ const initialState = {
     purchased: false
 };
 
-const reducer = (state = initialState, action) => {
+const orderReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.PURCHASE_INIT:
             return {
@@ -20,7 +20,7 @@ const reducer = (state = initialState, action) => {
             };
         case actionTypes.PURCHASE_BURGER_SUCCESS:
             const purchasedOrder = {
-                ...action.order
+                ...action.purchasedOrder
             };
 
             return {
@@ -30,7 +30,22 @@ const reducer = (state = initialState, action) => {
                 orders: state.orders.concat(purchasedOrder)
             };
         case actionTypes.PURCHASE_BURGER_FAIL:
-            console.log("reducer PURCHASE_BURGER_FAIL");
+            return {
+                ...state,
+                loading: false
+            };
+        case actionTypes.FETCH_ORDERS_START:
+            return {
+                ...state,
+                loading: true
+            };
+        case actionTypes.FETCH_ORDERS_SUCCESS:
+            return {
+                ...state,
+                orders: action.orders,
+                loading: false
+            };
+        case actionTypes.FETCH_ORDERS_FAIL:
             return {
                 ...state,
                 loading: false
@@ -41,4 +56,4 @@ const reducer = (state = initialState, action) => {
 };
 
 
-export default reducer;
+export default orderReducer;

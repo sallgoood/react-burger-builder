@@ -9,7 +9,7 @@ const withHttpErrorHandler = (WrappedComponent, axios) => {
         };
 
         //this will be called before child components get rendered
-        componentWillMount() {
+        componentDidMount() {
             this.reqInterceptor = axios.interceptors.request.use(req => {
                 this.setState({error: null});
                 return req;
@@ -21,7 +21,6 @@ const withHttpErrorHandler = (WrappedComponent, axios) => {
         }
 
         componentWillUnmount() {
-            console.log("[ErrorHandler] will Unmount", this.reqInterceptor, this.resInterceptor);
             axios.interceptors.request.eject(this.reqInterceptor);
             axios.interceptors.response.eject(this.resInterceptor);
         }

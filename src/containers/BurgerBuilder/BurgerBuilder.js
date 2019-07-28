@@ -21,16 +21,16 @@ class BurgerBuilder extends Component {
         purchasing: false
     };
 
+    componentDidMount() {
+        this.props.onInitIngredients()
+    }
+
     updatePurchaseState(ingredients) {
         const sum = Object.keys(ingredients)
             .map(ingKey => ingredients[ingKey])
             .reduce((sum, el) => sum + el);
         return sum > 0;
     };
-
-    componentDidMount() {
-        this.props.onInitIngredients()
-    }
 
     // This syntax won't work correctly at least we try to use 'this' keyword in here, 'this' won't refer to the class
     // purchaseHandler() {
@@ -47,7 +47,7 @@ class BurgerBuilder extends Component {
 
     purchaseContinueHandler = () => {
         this.props.onInitPurchase();
-        this.props.history.push('checkout');
+        this.props.history.push('/checkout');
     };
 
     render() {

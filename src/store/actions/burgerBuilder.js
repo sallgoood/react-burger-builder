@@ -35,7 +35,7 @@ export const initIngredients = () => {
                 dispatch(setIngredients(response.data));
             })
             .catch(err => {
-                dispatch(fetchIngredientsFailed())
+                dispatch(fetchIngredientsFailed());
             });
     }
 };
